@@ -3,7 +3,7 @@
   "appName": "VinzStore",
   "webDir": "www",
   "server": {
-    "url": "https://vinzprostore.vinzprostore.workers.dev/",
+    "url": "https://nusantarawire.vinzprostore.workers.dev/",
     "cleartext": false
   }
 }
