@@ -2,7 +2,8 @@ name: Build APK
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,26 +16,32 @@ jobs:
         with:
           node-version: 18
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - run: npm install @capacitor/cli @capacitor/core @capacitor/android
+      - name: Install Capacitor
+        run: npm install @capacitor/cli @capacitor/core @capacitor/android
 
-      - run: mkdir -p www && echo "<h1>VinzStore</h1>" > www/index.html
+      - name: Create www
+        run: |
+          mkdir -p www
+          echo "<!DOCTYPE html><html><body>Loading...</body></html>" > www/index.html
 
-      - run: npx cap init VinzStore com.vinzstore.app
-
-      - run: npx cap add android
-
-      - run: npx cap sync android
+      - name: Sync Capacitor
+        run: npx cap sync android
 
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
-      - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
+      - name: Build APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
-          name: apk
+          name: app-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
