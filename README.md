@@ -1,0 +1,1 @@
+# vinzstore.apk
