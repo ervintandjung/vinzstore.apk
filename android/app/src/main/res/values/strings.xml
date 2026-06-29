@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">VinzStore</string>
+    <string name="title_activity_main">VinzStore</string>
+    <string name="package_name">com.vinzstore.app</string>
+    <string name="custom_url_scheme">com.vinzstore.app</string>
+</resources>

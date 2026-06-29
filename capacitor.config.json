@@ -1,0 +1,9 @@
+{
+  "appId": "com.vinzstore.app",
+  "appName": "VinzStore",
+  "webDir": "www",
+  "server": {
+    "url": "https://vinzprostore.vinzprostore.workers.dev/",
+    "cleartext": false
+  }
+}
