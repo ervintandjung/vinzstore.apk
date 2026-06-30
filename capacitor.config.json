@@ -1,9 +1,5 @@
 {
-  "appId": "com.nusantara-wire.app",
-  "appName": "nusantara-wire",6
-  "webDir": "www",
-  "server": {
-    "url": "https://nusantarawire.vinzprostore.workers.dev/",
-    "cleartext": false
-  }
+  "appId": "com.nusantarawire.app",
+  "appName": "nusantara-wire",
+  "webDir": "www"
 }
