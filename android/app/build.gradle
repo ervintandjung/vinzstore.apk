@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.nusantarawire.app"
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.nusantarawire.app"
